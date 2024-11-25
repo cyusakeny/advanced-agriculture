@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { PiShareNetworkThin } from "react-icons/pi";
 import { HiOutlinePresentationChartLine } from "react-icons/hi2";
 import { LiaFileContractSolid } from "react-icons/lia";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -9,8 +10,8 @@ export default function Home() {
       <nav className=" flex items-center bg-red-500  justify-center h-[10%] rounded-xl ml-4 mr-4">
         <ul className="flex font-sans flex-row sm:space-x-44 space-x-4 text-lg text-white">
           <li> <a href="">Home</a></li>
-          <li> <a href="">Contact Us</a></li>
-          <li> <a href="">Join</a></li>
+          <li> <Link href="">Contact Us</Link></li>
+          <li> <Link href="/login">Log In</Link></li>
         </ul>
       </nav>
       <div className="mx-[8%] flex sm:flex-row flex-col mt-8">
@@ -19,9 +20,11 @@ export default function Home() {
             <p className="mt-2 text-3xl text-red-400 font-sans font-bold">Connect With Partners</p>
             <p className="mt-8 text-justify	">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+         <Link href="/register">
           <button className='w-44 h-16 bg-red-500 text-white text-sans mt-12 rounded-2xl'>
             Join
           </button>
+          </Link>
           </div>
           <div className="sm:w-[50%] w-full  h-[400px] relative">
           <Image
