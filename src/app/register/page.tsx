@@ -27,7 +27,7 @@ export default function Register(){
         try {
           const response = await axios.post('https://advanced-agriculture-be-1.onrender.com/users/register', formData);
     
-          if (response.status === 200) {
+          if (response.data.status === 201) {
             console.log('Form submitted successfully:', response.data);
             localStorage.setItem('token',response.data.token)
             localStorage.setItem('id',response.data.data.id)

@@ -85,7 +85,7 @@ export default function AddNewProjectCard({isOpen,onClose}:AddNewProjectCardProp
                         <select name="type" onChange={handleChange} className=" h-10 w-[70%] pl-2  outline-none border-[1px] border-red-500 rounded-lg " required>
                           <option value="" disabled>Select project type</option>
                           <option value="RESEARCH">RESEARCH</option>
-                          <option value="BUSINESS">BUSINESS</option>
+                          <option value="BUSSINESS">BUSINESS</option>
                           <option value="AGRICULTURE">AGRICULTURE</option>
                         </select>
                         <button className="bg-red-500 px-6 py-4 text-white  rounded-xl" onClick={handleAddMilestone}>
