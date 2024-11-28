@@ -6,6 +6,7 @@ import { useState,useEffect } from 'react';
 import { api } from '@/utils';
 
 type projectType = {
+    id:number;
     title:string;
     type:string;
     status:string;
@@ -43,21 +44,43 @@ export default function MyProfile() {
       }, []);
       const showProjects = (data?.project || []).length > 0;
       const hideHeader = showProjects ? '':'hidden';
+      const changeStatus = async (status:string,id:number)=>{
+        await api.put(`/projects/changeStatus/${id}/${status}`);
+      }
       const displayProjects = ()=>{
         if(!showProjects){
             return <p className='text-black'> No projects yet</p>
         }
         else{
-
             return (
+             
                 <>
                   {data?.project.map((item, index) => (
-                  <div key={index} className='flex w-full p-8 mt-4 space-x-20  flex-row rounded-xl overflow-x-auto border-[1px] border-gray-300 items-center'>
-                  <p className='text-base  w-[200px] sm:truncate'>{item.title} </p>
+                  <div key={index} className='flex w-full p-8 mt-4 space-x-8  flex-row rounded-xl overflow-x-auto border-[1px] border-gray-300 items-center'>
+                  <p className='text-base  w-[170px] sm:truncate'>{item.title} </p>
                   <p className='text-base w-[200px] sm:truncate'>{item.type}</p>
                   <p className={`text-base w-[200px] ${colorToShow(item.status)} sm:truncate`}>{item.status}</p>
-                  <p className='text-base w-[200px] sm:truncate'>{item.milestones}</p>
-                  <p className='text-base w-[200px] sm:truncate'>{item.milestones_achieved}</p>
+                  <p className='text-base w-[170px] sm:truncate'>{item.milestones}</p>
+                  <p className='text-base w-[170px] sm:truncate'>{item.milestones_achieved}</p>
+                  {
+                    item.status === 'PENDING' &&(
+                      <div className='w-[240px] flex flex-row justify-between'>
+                           <button
+            className="bg-green-500 text-white py-2 px-4  rounded "
+            onClick={()=>{changeStatus('COMPLETED',item.id)}}
+          >
+            Complete 
+          </button>
+
+          <button
+            className="bg-red-500  text-white py-2 px-4  rounded "
+            onClick={()=>{changeStatus('CANCELLED',item.id)}}
+          >
+            Cancel
+          </button>
+                      </div>
+                    )
+                  }
                   </div>
         ))}
                 </>
@@ -86,12 +109,12 @@ export default function MyProfile() {
             </div>
             <p className='font-bold text-4xl mb-6 mt-20 sm:px-20 px-2'> My Projects </p>
            <div className='flex flex-col  w-full h-full sm:px-20 px-2 pb-20 overflow-y-auto'>
-            <div className={`flex w-full  p-8 ${hideHeader} space-x-20 border-[1px] overflow-x-auto border-gray-200 text-gray-400 rounded-xl flex-row items-center`}>
-            <p className='font-bold text-2xl w-[200px]'>Name</p>
+            <div className={`flex w-full  p-8 ${hideHeader} space-x-8 border-[1px] overflow-x-auto border-gray-200 text-gray-400 rounded-xl flex-row items-center`}>
+            <p className='font-bold text-2xl w-[170px]'>Name</p>
             <p className='font-bold text-2xl w-[200px]'>Type</p>
             <p className='font-bold text-2xl w-[200px]'>Status</p>
-            <p className='font-bold text-2xl w-[200px]'>Milestones</p>
-            <p className='font-bold text-2xl w-[200px]'>Milestones Achieved</p>
+            <p className='font-bold text-2xl w-[170px]'>Milestones</p>
+            <p className='font-bold text-2xl w-[170px]'>Milestones Achieved</p>
             </div>
             {displayProjects()}
            </div>
