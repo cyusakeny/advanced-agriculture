@@ -80,21 +80,21 @@ export default function AddNewProjectCard({isOpen,onClose}:AddNewProjectCardProp
            <div className="  sm:w-[30%] w-[90%] bg-white rounded-xl border-2 border-gray-200 flex flex-col overflow-y-auto  sm:h-[900px]  h-full  flex pt-20 items-center  ">
                 <p className='font-bold text-4xl'> New Project Registration</p>
                     <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center py-4 w-full space-y-8" >
-                        <input type="text" required name="title" onChange={handleChange} className="h-10 w-[70%] pl-2 outline-none  border-[1px] border-red-500 rounded-lg" placeholder="Title"/>
-                        <input type="text" required name="description" onChange={handleChange} className="h-10 w-[70%] pl-2  outline-none border-[1px] border-red-500 rounded-lg" placeholder="Description" /> 
-                        <select name="type" onChange={handleChange} className=" h-10 w-[70%] pl-2  outline-none border-[1px] border-red-500 rounded-lg " required>
+                        <input type="text" required name="title" onChange={handleChange} className="h-10 w-[70%] pl-2 outline-none  border-[1px] border-[#2B83E9] rounded-lg" placeholder="Title"/>
+                        <input type="text" required name="description" onChange={handleChange} className="h-10 w-[70%] pl-2  outline-none border-[1px] border-[#2B83E9] rounded-lg" placeholder="Description" /> 
+                        <select name="type" onChange={handleChange} className=" h-10 w-[70%] pl-2  outline-none border-[1px] border-[#2B83E9] rounded-lg " required>
                           <option value="" disabled>Select project type</option>
                           <option value="RESEARCH">RESEARCH</option>
                           <option value="BUSSINESS">BUSINESS</option>
                           <option value="AGRICULTURE">AGRICULTURE</option>
                         </select>
-                        <button className="bg-red-500 px-6 py-4 text-white  rounded-xl" onClick={handleAddMilestone}>
+                        <button className="bg-[#2B83E9] px-6 py-4 text-white  rounded-xl" onClick={handleAddMilestone}>
                         Add Milestone
                         </button>
                         {formData.milestones.map((milestone,index)=>(
                           <div className="w-[70%] mt-8" key={index}>
-                         <input type="text" required  name='milestones' data-field='description' onChange={(e) => handleChange(e, index)} className="h-10 w-full pl-2 outline-none  border-[1px] border-red-500 rounded-lg" placeholder="Title"/>
-                          <select name='milestones' data-field='status' value={milestone.status} onChange={(e) => handleChange(e, index)} className=" h-10 w-full pl-2  mt-8 outline-none border-[1px] border-red-500 rounded-lg " required>
+                         <input type="text" required  name='milestones' data-field='description' onChange={(e) => handleChange(e, index)} className="h-10 w-full pl-2 outline-none  border-[1px] border-[#2B83E9] rounded-lg" placeholder="Title"/>
+                          <select name='milestones' data-field='status' value={milestone.status} onChange={(e) => handleChange(e, index)} className=" h-10 w-full pl-2  mt-8 outline-none border-[1px] border-[#2B83E9] rounded-lg " required>
                           <option value="" disabled>Select milestone status</option>
                           <option value="PENDING">PENDING</option>
                           <option value="CANCELLED">CANCELLED</option>
@@ -102,10 +102,10 @@ export default function AddNewProjectCard({isOpen,onClose}:AddNewProjectCardProp
                         </select>
                           </div>
                         ))}
-                        <button type="submit" className=" bg-red-500 px-6 py-4 text-white rounded-xl">Register</button>
+                        <button type="submit" className=" bg-[#2B83E9] px-6 py-4 text-white rounded-xl">Register</button>
                     </form>
                     <button
-            className="bg-red-500 text-white mt-20 px-4 py-2 rounded "
+            className="bg-[#2B83E9] text-white mt-20 px-4 py-2 rounded "
             onClick={onClose}
           >
             Close

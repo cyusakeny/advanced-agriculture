@@ -68,7 +68,7 @@ export default function dashboard() {
             <SideBar isVisible={true}/>
             <div className='flex flex-col bg-yellow-400 w-full'>
             <div className='  h-24 bg-white border-b-[1px] border-gray-300  flex flex-row justify-center items-center'>
-                    <button className=' bg-red-500 rounded-xl pl-3 text-white flex flex-row justify-center items-center h-16 w-36' onClick={openModal}>New Project  <MdAdd className='text-white h-6 w-10 font-bold'/> </button>
+                    <button className=' bg-[#2B83E9] rounded-xl pl-3 text-white flex flex-row justify-center items-center h-16 w-36' onClick={openModal}>New Project  <MdAdd className='text-white h-6 w-10 font-bold'/> </button>
                     <AddNewProjectCard isOpen={isModalOpen}  onClose={closeModal}/>
             </div>    
             <div className='grid sm:grid-cols-3 grid-cols-1 py-4 bg-blue-400 w-full justify-items-center overflow-y-auto gap-x-2 sm:gap-y-2 gap-y-4 bg-white h-full'>

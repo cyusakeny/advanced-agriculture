@@ -80,20 +80,20 @@ export default function SubmittAgreement({isOpen,id,onClose}:AddNewProjectCardPr
            <div className="  sm:w-[30%] w-[90%] bg-white rounded-xl border-2 border-gray-200 flex flex-col overflow-y-auto  sm:h-[900px]  h-full  flex pt-20 items-center  ">
                 <p className='font-bold text-4xl'> Make Bid</p>
                     <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center py-4 w-full space-y-8" >
-                        <input type="text" required name="title" onChange={handleChange} className="h-10 w-[70%] pl-2 outline-none  border-[1px] border-red-500 rounded-lg" placeholder="Title"/>
-                        <input type="text" required name="description" onChange={handleChange} className="h-10 w-[70%] pl-2  outline-none border-[1px] border-red-500 rounded-lg" placeholder="Description" /> 
-                        <button className="bg-red-500 px-6 py-4 text-white  rounded-xl" onClick={handleAddPoints}>
+                        <input type="text" required name="title" onChange={handleChange} className="h-10 w-[70%] pl-2 outline-none  border-[1px] border-[#2B83E9] rounded-lg" placeholder="Title"/>
+                        <input type="text" required name="description" onChange={handleChange} className="h-10 w-[70%] pl-2  outline-none border-[1px] border-[#2B83E9] rounded-lg" placeholder="Description" /> 
+                        <button className="bg-[#2B83E9] px-6 py-4 text-white  rounded-xl" onClick={handleAddPoints}>
                         Add Agreement Point
                         </button>
                         {formData.points.map((milestone,index)=>(
                           <div className="w-[70%] mt-8" key={index}>
-                         <input type="text" required  name='points' data-field='description' onChange={(e) => handleChange(e, index)} className="h-10 w-full pl-2 outline-none  border-[1px] border-red-500 rounded-lg" placeholder="Description"/>
+                         <input type="text" required  name='points' data-field='description' onChange={(e) => handleChange(e, index)} className="h-10 w-full pl-2 outline-none  border-[1px] border-[#2B83E9] rounded-lg" placeholder="Description"/>
                           </div>
                         ))}
-                        <button type="submit" className=" bg-red-500 px-6 py-4 text-white rounded-xl">Submit</button>
+                        <button type="submit" className=" bg-[#2B83E9] px-6 py-4 text-white rounded-xl">Submit</button>
                     </form>
                     <button
-            className="bg-red-500 text-white mt-20 px-4 py-2 rounded "
+            className="bg-[#2B83E9] text-white mt-20 px-4 py-2 rounded "
             onClick={onClose}
           >
             Close

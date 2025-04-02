@@ -62,13 +62,13 @@ export default function ViewMoreCard({isOpen,id,onClose}:ViewMoreCardProps) {
     const project = data?.type
     const displayImage = ()=>{
       if(project === "BUSSINESS"){
-        return  <TiBusinessCard className="w-72 h-48 text-red-500"/>
+        return  <TiBusinessCard className="w-72 h-48 text-[#2B83E9]"/>
       }
       if(project === "RESEARCH"){
-        return  <GiArchiveResearch className="w-72 h-48 text-red-500"/>
+        return  <GiArchiveResearch className="w-72 h-48 text-[#2B83E9]"/>
       }
       if(project === "AGRICULTURE"){
-        return  <MdOutlineAgriculture className="w-72 h-48 text-red-500"/>
+        return  <MdOutlineAgriculture className="w-72 h-48 text-[#2B83E9]"/>
       }
     }
     const displayIcon = (status:string)=>{
@@ -119,7 +119,7 @@ export default function ViewMoreCard({isOpen,id,onClose}:ViewMoreCardProps) {
           </button>
            <SubmittAgreement id={id} isOpen={isModalOpen} onClose={closeForm}/>
           <button
-            className="bg-red-500 mt-20 mb-4 text-white px-4 py-2 rounded "
+            className="bg-[#2B83E9] mt-20 mb-4 text-white px-4 py-2 rounded "
             onClick={onClose}
           >
             Close

@@ -36,7 +36,7 @@ export default function ViewMoreAgreementCard({isOpen,id,onClose}:ViewMoreCardPr
 
     if (!isOpen) return null;
     const displayImage = ()=>{
-        return  <MdOutlineAssignment className="w-72 h-48 text-red-500"/>  
+        return  <MdOutlineAssignment className="w-72 h-48 text-[#2B83E9]"/>  
     }
     const [data, setData] = useState<AgreementType>();
     const [isLoading, setIsLoading] = useState(true);
@@ -105,7 +105,7 @@ export default function ViewMoreAgreementCard({isOpen,id,onClose}:ViewMoreCardPr
           </button>
 
           <button
-            className="bg-red-500 mt-20 mb-4 text-white px-4 py-2 rounded "
+            className="bg-[#2B83E9] mt-20 mb-4 text-white px-4 py-2 rounded "
             onClick={()=>{changeStatus('REJECTED')}}
           >
             Reject
@@ -114,7 +114,7 @@ export default function ViewMoreAgreementCard({isOpen,id,onClose}:ViewMoreCardPr
             </div> 
 
           <button
-            className="bg-red-500 mt-20 mb-4 text-white px-4 py-2 rounded "
+            className="bg-[#2B83E9] mt-20 mb-4 text-white px-4 py-2 rounded "
             onClick={onClose}
           >
             Close

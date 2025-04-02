@@ -46,19 +46,19 @@ export default function Login(){
         <div className="flex justify-center items-center  w-full  h-screen">
                 <div className="  sm:w-[30%] w-[90%] rounded-xl border-2 border-gray-200 flex flex-col  sm:h-[700px] h-full  flex justify-center items-center  ">
                 <p className='font-bold text-4xl'> LOGIN PAGE </p>
-                <div className="flex flex-row border border-red-400 ml-2 w-44 rounded-[20px]  mt-8 items-center mb-10">
+                <div className="flex flex-row border border-[#2B83E9] ml-2 w-44 rounded-[20px]  mt-8 items-center mb-10">
                 <MdAgriculture className="h-12 w-24"/>
-                <p className="text-4xl  font-sans text-red-400">F-C</p>
+                <p className="text-4xl  font-sans text-[#2B83E9]">F-C</p>
             </div>
     
                     <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center py-4 w-full space-y-8" >
-                        <input type="email" onChange={handleChange} name='email' className="h-10 w-[50%] pl-2 outline-none  border-[1px] border-red-500 rounded-lg" placeholder="Email"/>
-                        <input type="password" onChange={handleChange} name='password' className="h-10 w-[50%] pl-2  outline-none border-[1px] border-red-500 rounded-lg" placeholder="Password" />
-                        <button type="submit" className=" bg-red-500 px-6 py-4 text-white rounded-xl">Log In</button>
+                        <input type="email" onChange={handleChange} name='email' className="h-10 w-[50%] pl-2 outline-none  border-[1px] border-[#2B83E9] rounded-lg" placeholder="Email"/>
+                        <input type="password" onChange={handleChange} name='password' className="h-10 w-[50%] pl-2  outline-none border-[1px] border-[#2B83E9] rounded-lg" placeholder="Password" />
+                        <button type="submit" className=" bg-[#2B83E9] px-6 py-4 text-white rounded-xl">Log In</button>
                     </form>
                     <div className=" flex flex-row space-x-2">
                        <p className="text-gray-500"> Don't have an account ? </p> 
-                       <Link href="/register" className='font-bold text-red-500'> Sign Up </Link>
+                       <Link href="/register" className='font-bold text-[#2B83E9]'> Sign Up </Link>
                     </div>
                 </div>
         </div>

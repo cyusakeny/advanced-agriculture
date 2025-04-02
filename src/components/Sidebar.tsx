@@ -22,11 +22,11 @@ export default function SideBar({isVisible}:SideBarProps) {
     const width = isTrue ? "ml-2 w-44" : "mx-1 w-18 "
 return(
     <div className="flex flex-col bg-white">
-        <IoIosMenu className="text-red-500 h-12 w-24" onClick={changeVisibility}/>
+        <IoIosMenu className="text-[#2B83E9] h-12 w-24" onClick={changeVisibility}/>
         <aside className={`sm:block ${isNotHidden}  border-r pt-8 border-gray-200 space-y-4  bg-white h-screen flex flex-col` }>
-            <div className={`flex flex-row border border-red-400  ${width} rounded-[20px] items-center mb-10 `}>
+            <div className={`flex flex-row border border-[#2B83E9]  ${width} rounded-[20px] items-center mb-10 `}>
                 <MdAgriculture className="h-12 w-24"/>
-                <p className={`text-4xl ${isNotHidden} font-sans text-red-400`}>F-C</p>
+                <p className={`text-4xl ${isNotHidden} font-sans text-[#2B83E9]`}>F-C</p>
             </div>
            <Card message="Home" linkAddress='/' Icon={BsHouse} isExpanded={isTrue}/>
            <Card message="Projects" linkAddress='/dashboard' Icon={GoProjectSymlink} isExpanded={isTrue}/>
@@ -50,8 +50,8 @@ const Card : React.FC<CardProps>=({message,Icon,isExpanded,linkAddress})=>{
     const width = isExpanded ? "w-64" : "w-20"
     return(
         <Link href={linkAddress}>
-        <div className={`flex flex-row justify-start items-center  ${width} hover:bg-red-400 cursor-pointer h-12 space-x-2 `}>
-             <Icon className="h-6 w-10 text-red-500"/>
+        <div className={`flex flex-row justify-start items-center  ${width} hover:bg-[#2B83E9] cursor-pointer h-12 space-x-2 `}>
+             <Icon className="h-6 w-10 text-[#2B83E9]"/>
             <p className={`font-sans ${isHidden} text-base`}> {message}</p>
            
         </div>
