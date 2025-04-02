@@ -52,7 +52,7 @@ export default function Register(){
                 <p className='font-bold text-4xl'> REGISTER PAGE </p>
                 <div className="flex flex-row border border-red-400 ml-2 w-44 rounded-[20px]  mt-8 items-center mb-10">
                 <MdAgriculture className="h-12 w-24"/>
-                <p className="text-4xl  font-sans text-red-400">A-A</p>
+                <p className="text-4xl  font-sans text-red-400">F-C</p>
             </div>
                     <form onSubmit={handleSubmit}  className="flex flex-col justify-center items-center py-4 w-full space-y-8" >
                         <input type="text" name='name' value={formData.name} onChange={handleChange} className="h-10 w-[50%] pl-2  outline-none border-[1px] border-red-500 rounded-lg" placeholder="Full Names"/>

@@ -26,7 +26,7 @@ return(
         <aside className={`sm:block ${isNotHidden}  border-r pt-8 border-gray-200 space-y-4  bg-white h-screen flex flex-col` }>
             <div className={`flex flex-row border border-red-400  ${width} rounded-[20px] items-center mb-10 `}>
                 <MdAgriculture className="h-12 w-24"/>
-                <p className={`text-4xl ${isNotHidden} font-sans text-red-400`}>A-A</p>
+                <p className={`text-4xl ${isNotHidden} font-sans text-red-400`}>F-C</p>
             </div>
            <Card message="Home" linkAddress='/' Icon={BsHouse} isExpanded={isTrue}/>
            <Card message="Projects" linkAddress='/dashboard' Icon={GoProjectSymlink} isExpanded={isTrue}/>

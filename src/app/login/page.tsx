@@ -48,7 +48,7 @@ export default function Login(){
                 <p className='font-bold text-4xl'> LOGIN PAGE </p>
                 <div className="flex flex-row border border-red-400 ml-2 w-44 rounded-[20px]  mt-8 items-center mb-10">
                 <MdAgriculture className="h-12 w-24"/>
-                <p className="text-4xl  font-sans text-red-400">A-A</p>
+                <p className="text-4xl  font-sans text-red-400">F-C</p>
             </div>
     
                     <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center py-4 w-full space-y-8" >

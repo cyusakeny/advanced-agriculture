@@ -14,11 +14,11 @@ export default function Home() {
           <li> <Link href="/login">Log In</Link></li>
         </ul>
       </nav>
-      <div className="mx-[8%] flex sm:flex-row flex-col mt-8">
+      <div className="mx-[8%]  flex sm:flex-row flex-col mt-8">
           <div className=" sm:w-[50%] w-full sm:pr-6 pr-0 flex flex-col ">
-            <p className="text-4xl text-black font-sans font-bold">Improve Your Productivity</p> 
+            <p className="text-4xl text-black  font-sans font-bold">Improve Your Productivity</p> 
             <p className="mt-2 text-3xl text-red-400 font-sans font-bold">Connect With Partners</p>
-            <p className="mt-8 text-justify	">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p className="mt-8 text-[text-[#666666]] text-justify	">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
          <Link href="/register">
           <button className='w-44 h-16 bg-red-500 text-white text-sans mt-12 rounded-2xl'>
@@ -38,7 +38,7 @@ export default function Home() {
       </div>
       <div className='sm:mt-32 mt-4 justify-between mx-[8%] flex sm:flex-row flex-col'>
 
-        <div className='sm:w-[20%] w-full mt-4 pb-4 px-2  space-y-4  flex flex-col justify-start'>
+        <div className='sm:w-[20%]  w-full mt-4 pb-4 px-2  space-y-4  flex flex-col justify-start'>
           <p className='w-full text-base font-sans font-bold text-justify'>
             Connect with strong partners and improve your productivity
           </p>
